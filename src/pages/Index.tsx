@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Linkedin } from "lucide-react";
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -23,11 +25,15 @@ const Index = () => {
   const content = {
     en: {
       headline: "Enabling startups and SMEs to access the defence market.",
-      subline: "Quietly building the bridge between technology and defence."
+      subline: "Quietly building the bridge between technology and defence.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service"
     },
     de: {
       headline: "Startups und KMU den Zugang zum Verteidigungsmarkt ermöglichen.",
-      subline: "Wir bauen die Brücke zwischen Technologie und Verteidigung."
+      subline: "Wir bauen die Brücke zwischen Technologie und Verteidigung.",
+      privacy: "Datenschutzerklärung",
+      terms: "Nutzungsbedingungen"
     }
   };
 
@@ -91,6 +97,38 @@ const Index = () => {
           <span className="absolute -bottom-1 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
         </a>
       </div>
+
+      {/* Footer */}
+      <footer className="fade-in-delay-2 absolute bottom-6 left-0 right-0 z-10">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-6">
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/company/praetoriumtech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group transition-colors hover:text-accent"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-accent" />
+          </a>
+
+          {/* Links */}
+          <div className="flex items-center gap-4 text-xs text-muted-foreground">
+            <Link to="/privacy" className="transition-colors hover:text-foreground">
+              {content[language].privacy}
+            </Link>
+            <span>•</span>
+            <Link to="/terms" className="transition-colors hover:text-foreground">
+              {content[language].terms}
+            </Link>
+          </div>
+
+          {/* Copyright */}
+          <p className="text-xs text-muted-foreground">
+            Copyright © 2025 PRAETORIUM. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </main>;
 };
 export default Index;
