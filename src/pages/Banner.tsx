@@ -5,13 +5,17 @@ import { Button } from "@/components/ui/button";
 import { RotateCcw } from "lucide-react";
 
 const Banner = () => {
+  // Base vertical offsets (separate from drag positions)
+  const BASE_LOGO_OFFSET = -80;
+  const BASE_HEADLINE_OFFSET = 80;
+
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
   });
   const [language, setLanguage] = useState<"en" | "de">("en");
   
-  // Drag-and-drop state
+  // Drag-and-drop state (only stores user's manual adjustments)
   const [logoPosition, setLogoPosition] = useState({ x: 0, y: 0 });
   const [headlinePosition, setHeadlinePosition] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState<'logo' | 'headline' | null>(null);
@@ -152,7 +156,7 @@ const Banner = () => {
               dragging === 'logo' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
-              transform: `translate(calc(-50% + ${logoPosition.x}px), calc(-50% + ${logoPosition.y}px - 80px))`
+              transform: `translate(calc(-50% + ${logoPosition.x}px), calc(-50% + ${logoPosition.y}px + ${BASE_LOGO_OFFSET}px))`
             }}
             onMouseDown={(e) => handleMouseDown('logo', e)}
           >
@@ -181,7 +185,7 @@ const Banner = () => {
               dragging === 'headline' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
-              transform: `translate(calc(-50% + ${headlinePosition.x}px), calc(-50% + ${headlinePosition.y}px + 80px))`
+              transform: `translate(calc(-50% + ${headlinePosition.x}px), calc(-50% + ${headlinePosition.y}px + ${BASE_HEADLINE_OFFSET}px))`
             }}
             onMouseDown={(e) => handleMouseDown('headline', e)}
           >
