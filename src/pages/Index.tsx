@@ -30,7 +30,7 @@ const Index = () => {
     }
   };
 
-  return <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background px-6">
+  return <main className="page-load relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background px-6">
       {/* Subtle gradient background */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(207_40%_15%/0.15),transparent_50%)]" />
       
