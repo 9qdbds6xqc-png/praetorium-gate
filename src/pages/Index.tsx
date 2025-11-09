@@ -51,6 +51,23 @@ const Index = () => {
       </div>
 
       <div className="relative z-10 flex max-w-4xl flex-col items-center text-center">
+        {/* Logo */}
+        <div className="fade-in mb-6">
+          <svg 
+            width="32" 
+            height="32" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1.5" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+            className="text-accent"
+          >
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </div>
+        
         {/* Brand name */}
         <h1 className="fade-in mb-8 text-sm font-light uppercase tracking-[0.3em] text-muted-foreground">
           Praetorium
