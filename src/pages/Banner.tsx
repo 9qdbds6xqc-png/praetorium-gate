@@ -177,11 +177,11 @@ const Banner = () => {
 
           {/* Right section: Headline text - Draggable */}
           <div 
-            className={`fade-in-delay absolute right-4 top-1/2 -translate-y-1/2 flex items-center text-right select-none ${
+            className={`fade-in-delay absolute left-1/2 top-1/2 flex items-center text-center select-none ${
               dragging === 'headline' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
-              transform: `translate(calc(0% + ${headlinePosition.x}px), calc(-50% + ${headlinePosition.y}px))`
+              transform: `translate(calc(-50% + ${headlinePosition.x}px), calc(-50% + ${headlinePosition.y}px))`
             }}
             onMouseDown={(e) => handleMouseDown('headline', e)}
           >
