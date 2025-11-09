@@ -62,7 +62,7 @@ const Index = () => {
             strokeWidth="1.5" 
             strokeLinecap="round" 
             strokeLinejoin="round"
-            className="text-accent"
+            className="text-accent animate-[float_3s_ease-in-out_infinite]"
           >
             <polyline points="18 15 12 9 6 15" />
           </svg>
