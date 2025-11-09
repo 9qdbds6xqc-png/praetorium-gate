@@ -124,21 +124,47 @@ const Terms = () => {
           ))}
         </div>
 
-        {/* Logo at bottom for external linking */}
-        <div className="mt-16 flex justify-center">
-          <svg 
-            width="48" 
-            height="48" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="1.5" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-            className="text-accent"
-          >
-            <polyline points="18 15 12 9 6 15" />
-          </svg>
+        {/* Logos at bottom for external linking */}
+        <div className="mt-16 flex flex-col items-center gap-8">
+          {/* Chevron only */}
+          <div className="flex flex-col items-center gap-2">
+            <svg 
+              width="48" 
+              height="48" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="1.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="text-accent"
+            >
+              <polyline points="18 15 12 9 6 15" />
+            </svg>
+            <a 
+              href="/praetorium-logo.svg" 
+              download="praetorium-logo.svg"
+              className="text-xs text-muted-foreground hover:text-accent transition-colors"
+            >
+              {language === "en" ? "Download Chevron" : "Chevron herunterladen"}
+            </a>
+          </div>
+
+          {/* Full logo with text */}
+          <div className="flex flex-col items-center gap-2">
+            <img 
+              src="/praetorium-full-logo.svg" 
+              alt="PRAETORIUM Full Logo" 
+              className="w-60"
+            />
+            <a 
+              href="/praetorium-full-logo.svg" 
+              download="praetorium-full-logo.svg"
+              className="text-xs text-muted-foreground hover:text-accent transition-colors"
+            >
+              {language === "en" ? "Download Full Logo" : "Vollständiges Logo herunterladen"}
+            </a>
+          </div>
         </div>
       </div>
     </main>
