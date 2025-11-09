@@ -58,15 +58,15 @@ const Banner = () => {
         {/* Left/Center section: Logo and Brand name - more prominent */}
         <div className="fade-in flex flex-col items-center justify-center">
           <svg 
-            width="96" 
-            height="96" 
+            width="64" 
+            height="64" 
             viewBox="0 0 24 24" 
             fill="none" 
             stroke="currentColor" 
             strokeWidth="1.5" 
             strokeLinecap="round" 
             strokeLinejoin="round"
-            className="mb-8 text-accent"
+            className="mb-6 text-accent"
           >
             <polyline points="18 15 12 9 6 15" />
           </svg>
@@ -78,7 +78,7 @@ const Banner = () => {
 
         {/* Right section: Headline text */}
         <div className="fade-in-delay flex items-center justify-end text-right">
-          <h2 className="text-3xl font-light leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="text-xl font-light leading-tight tracking-tight text-foreground sm:text-2xl md:text-3xl">
             {content[language].headline}
           </h2>
         </div>
