@@ -148,7 +148,7 @@ const Banner = () => {
         <div className="flex h-full w-full items-center justify-between gap-8 px-4">
           {/* Center: Logo and Brand name - Draggable */}
           <div 
-            className={`fade-in absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center select-none ${
+            className={`fade-in absolute left-1/2 top-1/2 flex flex-col items-center justify-center select-none ${
               dragging === 'logo' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
