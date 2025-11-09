@@ -152,7 +152,7 @@ const Banner = () => {
               dragging === 'logo' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
-              transform: `translate(calc(-50% + ${logoPosition.x}px), calc(-50% + ${logoPosition.y}px - 50px))`
+              transform: `translate(calc(-50% + ${logoPosition.x}px), calc(-50% + ${logoPosition.y}px - 80px))`
             }}
             onMouseDown={(e) => handleMouseDown('logo', e)}
           >
@@ -181,7 +181,7 @@ const Banner = () => {
               dragging === 'headline' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
-              transform: `translate(calc(-50% + ${headlinePosition.x}px), calc(-50% + ${headlinePosition.y}px + 50px))`
+              transform: `translate(calc(-50% + ${headlinePosition.x}px), calc(-50% + ${headlinePosition.y}px + 80px))`
             }}
             onMouseDown={(e) => handleMouseDown('headline', e)}
           >
