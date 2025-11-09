@@ -148,11 +148,11 @@ const Banner = () => {
         <div className="flex h-full w-full items-center justify-between gap-8 px-4">
           {/* Center: Logo and Brand name - Draggable */}
           <div 
-            className={`fade-in absolute left-1/2 top-1/2 flex flex-col items-center justify-center select-none ${
+            className={`fade-in absolute left-8 top-1/2 flex flex-col items-start justify-center select-none ${
               dragging === 'logo' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
-              transform: `translate(calc(-50% + ${logoPosition.x}px), calc(-50% + ${logoPosition.y}px))`
+              transform: `translate(${logoPosition.x}px, calc(-50% + ${logoPosition.y}px))`
             }}
             onMouseDown={(e) => handleMouseDown('logo', e)}
           >
@@ -177,11 +177,11 @@ const Banner = () => {
 
           {/* Right section: Headline text - Draggable */}
           <div 
-            className={`fade-in-delay absolute left-1/2 top-1/2 flex items-center justify-center text-center select-none ${
+            className={`fade-in-delay absolute left-8 top-1/2 flex items-center justify-start text-left select-none ${
               dragging === 'headline' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
-              transform: `translate(calc(-50% + ${headlinePosition.x}px), calc(-50% + ${headlinePosition.y}px))`
+              transform: `translate(${headlinePosition.x}px, calc(-50% + ${headlinePosition.y}px))`
             }}
             onMouseDown={(e) => handleMouseDown('headline', e)}
           >
