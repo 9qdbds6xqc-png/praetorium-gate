@@ -123,6 +123,15 @@ const Terms = () => {
             </div>
           ))}
         </div>
+
+        {/* Logo at bottom for external linking */}
+        <div className="mt-16 flex justify-center">
+          <img 
+            src="/praetorium-logo.svg" 
+            alt="Praetorium Logo" 
+            className="h-12 w-12 text-accent"
+          />
+        </div>
       </div>
     </main>
   );
