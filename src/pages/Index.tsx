@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -40,8 +41,9 @@ const Index = () => {
       top: `${mousePosition.y}px`
     }} />
 
-      {/* Language switcher */}
-      <div className="fade-in absolute right-6 top-6 z-20">
+      {/* Theme and Language controls */}
+      <div className="fade-in absolute right-6 top-6 z-20 flex items-center gap-3">
+        <ThemeToggle />
         <Tabs value={language} onValueChange={(value) => setLanguage(value as "en" | "de")}>
           <TabsList>
             <TabsTrigger value="en">EN</TabsTrigger>
