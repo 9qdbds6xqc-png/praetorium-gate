@@ -54,15 +54,15 @@ const Index = () => {
         {/* Logo */}
         <div className="fade-in mb-6">
           <svg 
-            width="32" 
-            height="32" 
+            width="48" 
+            height="48" 
             viewBox="0 0 24 24" 
             fill="none" 
             stroke="currentColor" 
             strokeWidth="1.5" 
             strokeLinecap="round" 
             strokeLinejoin="round"
-            className="text-accent animate-[float_3s_ease-in-out_infinite]"
+            className="text-accent"
           >
             <polyline points="18 15 12 9 6 15" />
           </svg>
