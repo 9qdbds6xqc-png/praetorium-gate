@@ -126,11 +126,19 @@ const Terms = () => {
 
         {/* Logo at bottom for external linking */}
         <div className="mt-16 flex justify-center">
-          <img 
-            src="/praetorium-logo.svg" 
-            alt="Praetorium Logo" 
-            className="h-12 w-12 text-accent"
-          />
+          <svg 
+            width="48" 
+            height="48" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1.5" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+            className="text-accent"
+          >
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
         </div>
       </div>
     </main>
