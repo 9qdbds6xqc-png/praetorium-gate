@@ -170,14 +170,14 @@ const Banner = () => {
               <polyline points="18 15 12 9 6 15" />
             </svg>
             
-            <h1 className="text-xl font-light uppercase tracking-[0.3em] text-foreground pointer-events-none">
+            <h1 className="text-xl font-light uppercase tracking-[0.3em] text-foreground pointer-events-none -mr-[0.3em]">
               Praetorium
             </h1>
           </div>
 
           {/* Right section: Headline text - Draggable */}
           <div 
-            className={`fade-in-delay absolute left-1/2 top-1/2 flex items-center text-center select-none ${
+            className={`fade-in-delay absolute left-1/2 top-1/2 flex items-center justify-center text-center select-none ${
               dragging === 'headline' ? 'cursor-grabbing opacity-80' : 'cursor-move'
             } ${dragging === null ? 'transition-transform duration-200' : ''}`}
             style={{
