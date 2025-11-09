@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronDown } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Terms = () => {
   const [language, setLanguage] = useState<"en" | "de">("en");
+  const [mediaOpen, setMediaOpen] = useState(false);
 
   const content = {
     en: {
@@ -124,48 +126,77 @@ const Terms = () => {
           ))}
         </div>
 
-        {/* Logos at bottom for external linking */}
-        <div className="mt-16 flex flex-col items-center gap-8">
-          {/* Chevron only */}
-          <div className="flex flex-col items-center gap-2">
-            <svg 
-              width="48" 
-              height="48" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="1.5" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-              className="text-accent"
-            >
-              <polyline points="18 15 12 9 6 15" />
-            </svg>
-            <a 
-              href="/praetorium-logo.svg" 
-              download="praetorium-logo.svg"
-              className="text-xs text-muted-foreground hover:text-accent transition-colors"
-            >
-              {language === "en" ? "Download Chevron" : "Chevron herunterladen"}
-            </a>
-          </div>
+        {/* Media section with logos */}
+        <Collapsible open={mediaOpen} onOpenChange={setMediaOpen} className="mt-16">
+          <CollapsibleTrigger className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors mx-auto">
+            {language === "en" ? "Media" : "Medien"}
+            <ChevronDown className={`h-4 w-4 transition-transform ${mediaOpen ? "rotate-180" : ""}`} />
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent className="mt-8">
+            <div className="flex flex-col items-center gap-8">
+              {/* Chevron only */}
+              <div className="flex flex-col items-center gap-2">
+                <svg 
+                  width="48" 
+                  height="48" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="1.5" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="text-accent"
+                >
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>
+                <div className="flex gap-3 text-xs">
+                  <a 
+                    href="/praetorium-logo.svg" 
+                    download="praetorium-logo.svg"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    {language === "en" ? "SVG" : "SVG"}
+                  </a>
+                  <span className="text-muted-foreground/50">|</span>
+                  <a 
+                    href="/praetorium-logo.png" 
+                    download="praetorium-logo.png"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    {language === "en" ? "PNG" : "PNG"}
+                  </a>
+                </div>
+              </div>
 
-          {/* Full logo with text */}
-          <div className="flex flex-col items-center gap-2">
-            <img 
-              src="/praetorium-full-logo.svg" 
-              alt="PRAETORIUM Full Logo" 
-              className="w-60"
-            />
-            <a 
-              href="/praetorium-full-logo.svg" 
-              download="praetorium-full-logo.svg"
-              className="text-xs text-muted-foreground hover:text-accent transition-colors"
-            >
-              {language === "en" ? "Download Full Logo" : "Vollständiges Logo herunterladen"}
-            </a>
-          </div>
-        </div>
+              {/* Full logo with text */}
+              <div className="flex flex-col items-center gap-2">
+                <img 
+                  src="/praetorium-full-logo.svg" 
+                  alt="PRAETORIUM Full Logo" 
+                  className="w-60"
+                />
+                <div className="flex gap-3 text-xs">
+                  <a 
+                    href="/praetorium-full-logo.svg" 
+                    download="praetorium-full-logo.svg"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    {language === "en" ? "SVG" : "SVG"}
+                  </a>
+                  <span className="text-muted-foreground/50">|</span>
+                  <a 
+                    href="/praetorium-full-logo.png" 
+                    download="praetorium-full-logo.png"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    {language === "en" ? "PNG" : "PNG"}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
       </div>
     </main>
   );
