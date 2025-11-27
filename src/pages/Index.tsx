@@ -24,13 +24,13 @@ const Index = () => {
 
   const content = {
     en: {
-      headline: "Enabling startups and SMEs to access the defence market.",
+      headline: "Defending our democracies.",
       subline: "Quietly building the bridge between technology and defence.",
       privacy: "Privacy Policy",
       terms: "Terms of Service"
     },
     de: {
-      headline: "Startups und KMU den Zugang zum Verteidigungsmarkt ermöglichen.",
+      headline: "Unsere Demokratien verteidigen.",
       subline: "Wir bauen die Brücke zwischen Technologie und Verteidigung.",
       privacy: "Datenschutzerklärung",
       terms: "Nutzungsbedingungen"
