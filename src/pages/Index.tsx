@@ -25,13 +25,11 @@ const Index = () => {
   const content = {
     en: {
       headline: "Defending our democracies.",
-      subline: "Quietly building the bridge between technology and defence.",
       privacy: "Privacy Policy",
       terms: "Terms of Service"
     },
     de: {
-      headline: "Unsere Demokratien verteidigen.",
-      subline: "Wir bauen die Brücke zwischen Technologie und Verteidigung.",
+      headline: "Demokratie verteidigen.",
       privacy: "Datenschutzerklärung",
       terms: "Nutzungsbedingungen"
     }
@@ -82,14 +80,10 @@ const Index = () => {
         </h1>
 
         {/* Main message */}
-        <h2 className="fade-in-delay mb-6 text-4xl font-light leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+        <h2 className="fade-in-delay mb-16 text-4xl font-light leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
           {content[language].headline}
         </h2>
 
-        {/* Subline */}
-        <p className="fade-in-delay-2 mb-16 text-lg font-light text-muted-foreground sm:text-xl">
-          {content[language].subline}
-        </p>
 
         {/* Contact */}
         <a href="mailto:contact@praetorium.tech" className="fade-in-delay-2 group relative text-sm font-light tracking-wide text-muted-foreground transition-colors hover:text-foreground">
