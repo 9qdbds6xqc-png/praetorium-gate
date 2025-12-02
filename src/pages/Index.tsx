@@ -24,12 +24,12 @@ const Index = () => {
 
   const content = {
     en: {
-      headline: "Defending our democracies.",
+      headline: "Building something new.",
       privacy: "Privacy Policy",
       terms: "Terms of Service"
     },
     de: {
-      headline: "Demokratie verteidigen.",
+      headline: "Building something new.",
       privacy: "Datenschutzerklärung",
       terms: "Nutzungsbedingungen"
     }
