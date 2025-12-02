@@ -62,12 +62,10 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/a2475abe-ad06-4fab-8055-c980636970b3) and click on Share -> Publish.
+This project is automatically deployed to GitHub Pages via GitHub Actions on every push to the `main` branch.
 
-## Can I connect a custom domain to my Lovable project?
+The site is live at: **https://www.praetorium.tech**
 
-Yes, you can!
+## Custom Domain
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The custom domain `www.praetorium.tech` is configured via the `CNAME` file in the `public/` directory.
