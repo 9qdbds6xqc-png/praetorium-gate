@@ -53,32 +53,25 @@ const Index = () => {
       </div>
 
       <div className="relative z-10 flex max-w-4xl flex-col items-center text-center">
-        {/* Logo */}
-        <div className="fade-in mb-8 flex flex-col items-center">
-          <div className="hero-logo-shell">
-            <div className="hero-logo-glow" />
-            <div className="hero-logo-core">
-              <svg
-                width="96"
-                height="96"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="hero-logo-icon"
-              >
-                <polyline points="18 15 12 9 6 15" />
-              </svg>
-            </div>
-          </div>
-        </div>
+        <div className="fade-in mb-10 flex flex-col items-center gap-6">
+          <svg
+            width="96"
+            height="96"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="hero-arrow-icon"
+          >
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
 
-        {/* Brand name */}
-        <h1 className="fade-in mb-8 text-sm font-light uppercase tracking-[0.3em] text-muted-foreground">
-          Praetorium
-        </h1>
+          <h1 className="text-sm font-light uppercase tracking-[0.3em] text-muted-foreground">
+            Praetorium
+          </h1>
+        </div>
 
         {/* Contact */}
         <a href="mailto:contact@praetorium.tech" className="fade-in-delay-2 group relative text-sm font-light tracking-wide text-muted-foreground transition-colors hover:text-foreground">
