@@ -150,3 +150,83 @@ All colors MUST be HSL.
     filter: blur(0);
   }
 }
+
+.hero-logo-shell {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  height: 18rem;
+}
+
+.hero-logo-glow {
+  position: absolute;
+  inset: -2rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 50%, hsl(207 90% 65% / 0.4), transparent 65%);
+  filter: blur(32px);
+  opacity: 0.85;
+  animation: heroGlow 12s ease-in-out infinite;
+}
+
+.hero-logo-core {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 9999px;
+  border: 1px solid hsl(207 40% 45% / 0.35);
+  background: radial-gradient(circle at 30% 30%, hsl(207 60% 65% / 0.35), hsl(220 55% 8% / 0.9));
+  box-shadow: 0 35px 80px hsl(220 50% 4% / 0.65);
+  backdrop-filter: blur(12px);
+  animation: heroFloat 9s ease-in-out infinite;
+}
+
+.hero-logo-icon {
+  width: 5rem;
+  height: 5rem;
+  color: hsl(207 30% 85%);
+  animation: heroPulse 7s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-14px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroPulse {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroGlow {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.08);
+  }
+}

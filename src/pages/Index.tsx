@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Linkedin } from "lucide-react";
-
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -24,12 +22,10 @@ const Index = () => {
 
   const content = {
     en: {
-      headline: "Building something new.",
       privacy: "Privacy Policy",
       terms: "Terms of Service"
     },
     de: {
-      headline: "Building something new.",
       privacy: "Datenschutzerklärung",
       terms: "Nutzungsbedingungen"
     }
@@ -58,32 +54,31 @@ const Index = () => {
 
       <div className="relative z-10 flex max-w-4xl flex-col items-center text-center">
         {/* Logo */}
-        <div className="fade-in mb-6">
-          <svg 
-            width="48" 
-            height="48" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="1.5" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-            className="text-accent"
-          >
-            <polyline points="18 15 12 9 6 15" />
-          </svg>
+        <div className="fade-in mb-8 flex flex-col items-center">
+          <div className="hero-logo-shell">
+            <div className="hero-logo-glow" />
+            <div className="hero-logo-core">
+              <svg
+                width="96"
+                height="96"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="hero-logo-icon"
+              >
+                <polyline points="18 15 12 9 6 15" />
+              </svg>
+            </div>
+          </div>
         </div>
-        
+
         {/* Brand name */}
         <h1 className="fade-in mb-8 text-sm font-light uppercase tracking-[0.3em] text-muted-foreground">
           Praetorium
         </h1>
-
-        {/* Main message */}
-        <h2 className="fade-in-delay mb-16 text-4xl font-light leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-          {content[language].headline}
-        </h2>
-
 
         {/* Contact */}
         <a href="mailto:contact@praetorium.tech" className="fade-in-delay-2 group relative text-sm font-light tracking-wide text-muted-foreground transition-colors hover:text-foreground">
@@ -95,17 +90,6 @@ const Index = () => {
       {/* Footer */}
       <footer className="fade-in-delay-2 absolute bottom-6 left-0 right-0 z-10">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-6">
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/company/praetoriumtech"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group transition-colors hover:text-accent"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-accent" />
-          </a>
-
           {/* Links */}
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <Link to="/privacy" className="transition-colors hover:text-foreground">
