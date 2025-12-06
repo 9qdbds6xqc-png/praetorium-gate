@@ -71,26 +71,6 @@ const Index = () => {
           <h1 className="text-sm font-light uppercase tracking-[0.3em] text-muted-foreground">
             Praetorium
           </h1>
-
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/40 via-indigo-900/30 to-purple-900/40 px-8 py-10 shadow-[0_10px_60px_rgba(137,109,255,0.25)]">
-            <div className="absolute inset-0 rounded-3xl border border-white/5" />
-            <div className="relative flex flex-col items-center gap-4 text-center">
-              <p className="text-[0.65rem] uppercase tracking-[0.5em] text-white/50">Special Showcase</p>
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                <span className="bg-gradient-to-r from-amber-300 via-rose-400 to-violet-500 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(255,255,255,0.4)]">
-                  Hello World!
-                </span>
-              </h2>
-              <p className="max-w-lg text-sm text-white/75">
-                Ein schillernder Gruß an alle Visionärinnen und Visionäre – elegant, lebendig und voller Energie für das,
-                was als Nächstes kommt.
-              </p>
-              <div className="flex items-center justify-center gap-3">
-                <span className="h-[2px] w-16 rounded-full bg-gradient-to-r from-transparent via-white/70 to-transparent animate-pulse" />
-                <span className="h-[2px] w-16 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse delay-150" />
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Contact */}
